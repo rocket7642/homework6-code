@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=MyMiniSearchEngineTest
+comment1.params=
+comment1.target=java.util.List\ documents()
+comment2.params=
+comment2.target=void\ testOneWord()
+comment3.params=
+comment3.target=void\ testTwoWord()
+comment4.params=
+comment4.target=void\ testThreeWord()
+comment5.params=
+comment5.target=void\ testFourWord()
+comment6.params=
+comment6.target=void\ testWordNotFound()
+numComments=7
