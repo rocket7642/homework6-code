@@ -50,20 +50,32 @@ public class MyMiniSearchEngine {
             //System.out.println("---");
         }
         
-        for(Map.Entry entry : indexes2.entrySet()){
+        //System.out.println(indexes2.entrySet());
+        /*for(Map.Entry entry : indexes2.entrySet()){
             System.out.print(entry.getKey() + ":");
             Map<Integer, List<Integer>> temp = (Map)entry.getValue();
             for(Map.Entry entry2 : temp.entrySet()){
                 System.out.println(entry2.getKey()+ ":" + entry2.getValue());
             }
-        }
+        }*/
     }
 
     // search(key) return all the document ids where the given key phrase appears.
     // key phrase can have one or two words in English alphabetic characters.
     // return an empty list if search() finds no match in all documents.
     public List<Integer> search(String keyPhrase) {
-        // homework
+        String temp[] = keyPhrase.split(" ");
+        if(temp.length == 1 && indexes2.containsKey(temp[0])){
+            Map<Integer, List<Integer>> holder = (Map)indexes2.get(temp[0]);
+            List<Integer> output = new ArrayList<Integer>();
+            for(Map.Entry entry : holder.entrySet()){
+                output.add((int)entry.getKey());
+            }
+            return output;
+        }
+        
+        
+        
         return new ArrayList<>(); // place holder
     }
 }
