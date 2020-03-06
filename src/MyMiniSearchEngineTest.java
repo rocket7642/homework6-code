@@ -56,13 +56,15 @@ public class MyMiniSearchEngineTest {
 
     @Test
     public void testFourWord() {
-        // homework
+        MyMiniSearchEngine engine = new MyMiniSearchEngine(documents());
+        
         assertTrue(false); // place holder
     }
 
     @Test
     public void testWordNotFound() {
-        // homework
-        assertTrue(false); // place holder
+        MyMiniSearchEngine engine = new MyMiniSearchEngine(documents());
+        List<Integer> result = engine.search("ubbus");
+        assertEquals(List.of(-1),result);
     }
 }
