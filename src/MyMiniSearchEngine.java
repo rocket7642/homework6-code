@@ -65,6 +65,8 @@ public class MyMiniSearchEngine {
     // return an empty list if search() finds no match in all documents.
     public List<Integer> search(String keyPhrase) {
         String temp[] = keyPhrase.split(" ");
+        
+        
         if(temp.length == 1 && indexes2.containsKey(temp[0])){
             Map<Integer, List<Integer>> holder = (Map)indexes2.get(temp[0]);
             List<Integer> output = new ArrayList<Integer>();
@@ -76,6 +78,11 @@ public class MyMiniSearchEngine {
 
         List<Integer> Fail = new ArrayList<Integer>();
         Fail.add(-1);
+        
+        for(int i = 0; i < temp.length; i++){
+            temp[i] = temp[i].toLowerCase();
+        }
+        
 
         for(String trans : temp){
             if(!(indexes2.containsKey(trans))){

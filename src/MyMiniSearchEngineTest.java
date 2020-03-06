@@ -46,6 +46,11 @@ public class MyMiniSearchEngineTest {
                 "rains hello abc",
                 "rains Hello abc",
         };
+        
+        /*
+         * it reads a failure in my code for some reason, even though the words do exist in the index
+         * I dont understand.
+         */
 
         for (String input : inputs) {
             List<Integer> result = engine.search(input);
