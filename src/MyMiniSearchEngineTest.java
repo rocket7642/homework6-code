@@ -62,8 +62,19 @@ public class MyMiniSearchEngineTest {
     @Test
     public void testFourWord() {
         MyMiniSearchEngine engine = new MyMiniSearchEngine(documents());
+
+        String inputs =  "rains Hello abc world";
         
-        assertTrue(false); // place holder
+        /*
+         * it reads a failure in my code for some reason, even though the words do exist in the index
+         * I dont understand.
+         */
+
+        
+            List<Integer> result = engine.search(inputs);
+            assertEquals(1, result.size());
+            assertEquals(List.of(4), result);
+        
     }
 
     @Test
